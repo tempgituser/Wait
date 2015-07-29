@@ -18,7 +18,7 @@ bool checkInput(char* msChar){
 	int msCharLen = strlen(msChar);
 	for (int i = 0; i < msCharLen; i++){
 		if (msChar[i] < '0' || msChar[i] > '9'){
-			printf("wait:时间输入不合法。\n");
+			printf("wait:Time input is not legal.\n");
 			return false;
 		}
 	}
@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 	else if (argc > 2){
-		printf("wait:参数过多\n");
+		printf("wait:Too many arguments.\n");
 		exit(1);
 	}
 	else{
@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 			while (!checkInput(msChar)){
 				msChar = (char*)malloc(256 * sizeof(char));
 				memset(msChar, '\0', sizeof(char));
-				printf("输入时间:");
+				printf("Enter the time(ms):");
 				scanf("%s", msChar);
 			}
 
