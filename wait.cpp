@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include <stdbool.h>
-#ifdef _WINDOWS
+#ifdef _WIN32
 #define __SLEEP__FUNC(x) _sleep(x)
 #define __PLATFORM_SLEEP_RATE__ 1
 #endif
