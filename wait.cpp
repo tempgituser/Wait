@@ -6,8 +6,7 @@
 #ifdef _WIN32
 #define __SLEEP__FUNC(x) _sleep(x)
 #define __PLATFORM_SLEEP_RATE__ 1
-#endif
-#ifdef __linux__
+#elif __linux__
 #include <unistd.h>
 #define __SLEEP__FUNC(x) usleep(x)
 #define __PLATFORM_SLEEP_RATE__ 1000
